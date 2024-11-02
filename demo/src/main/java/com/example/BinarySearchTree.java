@@ -80,14 +80,14 @@
         }
     
         public void inorder(Node node) {
-            int count = 0;
+            // int count = 0;
             if (node != null) {
                 inorder(node.left);
                 System.out.print(node.key + " ");
                 inorder(node.right);
             }
-            count++;
-            System.out.println("\njumlah hitungan" + count);
+            // count++;
+            // System.out.println("\njumlah hitungan" + count);
         }
     
         public void preorder(Node node) {
@@ -175,6 +175,15 @@
             }
             return true;
         }
+
+        public Node find(int key) {
+            return findRec(root,key);
+        }
+
+        private Node findRec(Node root, int key) {
+            
+        }
+
     }
     
         
