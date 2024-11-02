@@ -1,23 +1,30 @@
 package com.example;
 
-import java.util.Random;
-
 public class Main {
     public static void main(String[] args) {
         BinarySearchTree bst = new BinarySearchTree();
-        Random rand = new Random();
 
         System.out.println("10 Nomor Random kali ini : ");
-        for (int i = 0; i < 10; i++) {
-            int num = rand.nextInt(100);  
-            System.out.print(num + " ");
-            bst.insert(num);
-        }
+        bst.insert(12);
+        bst.insert(1);
+        bst.insert(7);
+        bst.insert(9);
+        bst.insert(5);
+        bst.insert(3);
+        bst.insert(11);
+        bst.insert(10);
+        bst.insert(4);
+        bst.insert(6);
         System.out.println("\n");
 
 
         System.out.println("Tree visualization :");
         bst.printTreePretty();
+
+        System.out.println("root dihapus : " + bst.remove(9));
+
+        bst.printTreePretty();
+
         
         long startTime = System.nanoTime();
         System.out.print("Inorder Traversal: ");
